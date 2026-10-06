@@ -15,7 +15,7 @@ h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(3.2rem,8vw,6.8rem);
 .lead{font-size:clamp(1.12rem,2vw,1.45rem);max-width:780px;color:#3f4e61}.meta{display:flex;gap:12px 24px;flex-wrap:wrap;color:var(--muted);font-size:.92rem}.meta a,.textlink{color:var(--fjord);text-decoration:none;border-bottom:1px solid #9eb0c3}
 section{padding:82px 0;border-bottom:1px solid var(--line)}.grid{display:grid;grid-template-columns:220px 1fr;gap:72px}h2{font:400 2rem Georgia,serif;margin:0}.note{color:var(--muted);font-size:.88rem}
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--paper);border:1px solid var(--line);padding:28px;min-height:215px;display:flex;flex-direction:column}.card h3{font-size:1.12rem;margin:20px 0 8px}.card p{color:var(--muted);font-size:.93rem;margin:0}.status{margin-top:auto;padding-top:20px;color:#71849a;font-size:.8rem}
-.feature{background:var(--ice);padding:34px;margin-bottom:18px}.feature h3{font:400 1.55rem Georgia,serif;margin:18px 0 10px}.feature p{color:#526277}.coming{display:flex;gap:12px 24px;flex-wrap:wrap;margin-top:22px;color:#68798d;font-size:.88rem}.actions{display:flex;gap:12px 22px;flex-wrap:wrap;margin-top:22px}.actions a{color:var(--fjord);font-weight:650;text-decoration:none;border-bottom:1px solid #9eb0c3}.comment{padding:20px 0;border-top:1px solid var(--line)}.comment:first-child{border-top:0;padding-top:0}.comment .source{color:var(--fjord);font-size:.78rem;font-weight:750;letter-spacing:.06em;text-transform:uppercase}.comment h3{font:400 1.18rem Georgia,serif;margin:5px 0 6px}.comment p{color:var(--muted);font-size:.9rem;margin:0 0 8px}
+.feature{background:var(--ice);padding:34px;margin-bottom:18px}.feature h3{font:400 1.55rem Georgia,serif;margin:18px 0 10px}.feature p{color:#526277}.coming{display:flex;gap:12px 24px;flex-wrap:wrap;margin-top:22px;color:#68798d;font-size:.88rem}.actions{display:flex;gap:12px 22px;flex-wrap:wrap;margin-top:22px}.actions a{color:var(--fjord);font-weight:650;text-decoration:none;border-bottom:1px solid #9eb0c3}.research-detail{margin-top:18px;padding:28px;background:var(--paper);border:1px solid var(--line)}.research-detail summary{cursor:pointer;color:var(--fjord);font-weight:700}.research-detail h4{font-family:Georgia,serif;font-size:1.15rem;margin:24px 0 8px}.research-detail p,.research-detail li{color:var(--muted);font-size:.92rem}.research-detail ul{padding-left:20px}.comment{padding:20px 0;border-top:1px solid var(--line)}.comment:first-child{border-top:0;padding-top:0}.comment .source{color:var(--fjord);font-size:.78rem;font-weight:750;letter-spacing:.06em;text-transform:uppercase}.comment h3{font:400 1.18rem Georgia,serif;margin:5px 0 6px}.comment p{color:var(--muted);font-size:.9rem;margin:0 0 8px}
 .pub{padding:23px 0;border-top:1px solid var(--line)}.pub:first-child{border-top:0;padding-top:0}.year{color:var(--fjord);font-size:.78rem;font-weight:750;letter-spacing:.08em}.pt{font:400 1.23rem Georgia,serif;margin:5px 0}.pm{color:var(--muted);font-size:.9rem}
 .copy{max-width:770px}.supervisor-link{color:var(--fjord);font-weight:650;text-decoration:none;border-bottom:1px solid #9eb0c3}.contact{margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}.contact h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:1.25rem;margin:0 0 8px}.contact p{margin:0;color:var(--muted)}.copy h3{margin:0 0 8px}.timeline{margin-top:28px}.time{display:grid;grid-template-columns:145px 1fr;gap:20px;padding:13px 0;border-top:1px solid var(--line)}.time span{color:var(--muted);font-size:.86rem}
 footer{padding:45px 0 65px;color:var(--muted);font-size:.86rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
@@ -49,13 +49,32 @@ footer{padding:45px 0 65px;color:var(--muted);font-size:.86rem}.foot{display:fle
 <div class="feature">
 <div class="tag">Trade × Sustainability · Current project</div>
 <h3>ACCTS — Environmental Goods &amp; Fossil-Fuel Subsidies</h3>
-<p>This project examines the gap between legal innovation and actual policy change under the Agreement on Climate Change, Trade and Sustainability (ACCTS).</p>
-<p>It focuses on two of the Agreement’s core disciplines: tariff elimination for environmental goods and new rules on fossil-fuel subsidies. The empirical analysis asks how much the four founding signatories — Costa Rica, Iceland, New Zealand and Switzerland — would actually need to change their pre-existing policies to comply with these new rules.</p>
-<p>For environmental goods, the project maps the final ACCTS Annex II list to 316 unique HS6 subheadings and compares pre-ACCTS tariff treatment across 66 economies, taking account of preferential tariffs under FTAs and other arrangements. The fossil-fuel subsidy analysis uses OECD support data and examines how major existing support measures interact with the new ACCTS disciplines.</p>
-<p>The broader question is whether ACCTS matters primarily because it requires immediate policy change from its founding members, or because it establishes a pathfinder framework that could become more consequential as additional economies join.</p>
-<p><strong>Publication status:</strong><br>Manuscript submitted for publication. The paper and its supplementary research materials are not publicly available at this stage.</p>
-<p><strong>Planned open materials:</strong><br>Following publication and subject to the publisher’s policies, this page is intended to provide the underlying datasets, methodological documentation and replication materials.</p>
+<p>This project uses trade and fossil-fuel-support data to examine the gap between <strong>legal innovation and actual policy change</strong> under the Agreement on Climate Change, Trade and Sustainability (ACCTS).</p>
+<p>The environmental-goods analysis maps the final ACCTS Annex II list to <strong>316 unique HS6 subheadings</strong> and compares pre-ACCTS tariff treatment across <strong>66 economies</strong> using UNCTAD TRAINS / World Bank WITS tariff data, including preferential treatment under FTAs and other arrangements. The fossil-fuel-subsidy analysis combines OECD Fossil Fuel Support data with measure-level legal analysis to examine how existing support policies interact with the new ACCTS disciplines.</p>
+<p>The manuscript has been submitted for publication. The paper and supplementary research materials are not publicly available at this stage. Following publication, and subject to the publisher’s policies, the underlying datasets, methodological documentation and replication materials are intended to be released here.</p>
 <div class="coming"><span>Manuscript · submitted</span><span>Data &amp; replication materials · planned for release following publication</span></div>
+
+<details class="research-detail">
+<summary>Research design &amp; data — details</summary>
+<h4>Research question</h4>
+<p>ACCTS creates legally novel disciplines, but legal novelty does not necessarily imply large immediate changes in the policies of its founding signatories. The project asks how much Costa Rica, Iceland, New Zealand and Switzerland would actually need to change their existing policies to comply with the Agreement’s rules on environmental goods and fossil-fuel subsidies.</p>
+
+<h4>Environmental goods</h4>
+<p>ACCTS Annex II contains 360 entries. After removing repeated HS6 codes, the empirical analysis works with 316 unique HS6 subheadings. It uses effectively applied tariff (AHS) data from UNCTAD TRAINS / World Bank WITS to identify pre-ACCTS tariff treatment, including preferential rates available under FTAs and other arrangements.</p>
+<p>The four ACCTS signatories are compared with a broader sample of 66 economies. This distinguishes the creation of a new legal obligation from the amount of additional tariff liberalisation that the founding members actually need to undertake.</p>
+
+<h4>Fossil-fuel subsidies</h4>
+<p>This part uses OECD Fossil Fuel Support data to compare recorded support across the four ACCTS signatories. It then conducts measure-level legal analysis of major Swiss support measures. The analysis distinguishes measures recorded as support in the OECD dataset from the separate legal question of whether those measures fall within the definitions, prohibitions and exceptions in ACCTS Chapter 4.</p>
+
+<h4>Replication materials</h4>
+<p>Three supplementary research workbooks have been prepared for independent verification and replication:</p>
+<ul>
+<li>Mapping of ACCTS Annex II Entries to Unique HS6 Subheadings</li>
+<li>AHS-Based Tariff Analysis of ACCTS Annex II Environmental Goods</li>
+<li>OECD Fossil Fuel Support Comparison</li>
+</ul>
+<p>These materials are not publicly available while the manuscript is in the Springer publication process. They are planned for release following publication, subject to the publisher’s policies.</p>
+</details>
 </div>
 </div></div></section>
 
@@ -69,7 +88,7 @@ footer{padding:45px 0 65px;color:var(--muted);font-size:.86rem}.foot{display:fle
 <article class="pub">
 <div class="year">2020 · DOCTORAL DISSERTATION</div>
 <div class="pt">International Trade in Food after a Nuclear Accident</div>
-<div class="pm">Doctoral Dissertation · University of Bern · Faculty of Law · 2020<br>PhD in Law · <em>magna cum laude</em><br>Supervised by <a class="supervisor-link" href="https://www.uniaktuell.unibe.ch/2025/will_trump_derail_world_trade/index_eng.html" target="_blank" rel="noopener">Prof. Thomas Cottier ↗</a><br>DOI: <a class="supervisor-link" href="https://doi.org/10.48549/3611" target="_blank" rel="noopener">10.48549/3611 ↗</a></div>
+<div class="pm">Doctoral Dissertation · University of Bern · Faculty of Law · 2020<br>PhD in Law · <em>magna cum laude</em><br>Supervised by <a class="supervisor-link" href="https://www.wti.org/institute/people/detail/4/cottier-thomas/" target="_blank" rel="noopener">Prof. Thomas Cottier ↗</a><br>DOI: <a class="supervisor-link" href="https://doi.org/10.48549/3611" target="_blank" rel="noopener">10.48549/3611 ↗</a></div>
 <p><a class="textlink" href="https://boristheses.unibe.ch/3611/" target="_blank" rel="noopener">Read dissertation ↗</a> &nbsp; <a class="textlink" href="https://boristheses.unibe.ch/3611/1/20ishikawa_y.pdf" target="_blank" rel="noopener">Full PDF ↗</a></p>
 </article>
 <p><a class="textlink" href="https://researchmap.jp/y.ishikawa" target="_blank" rel="noopener">Complete publication record on researchmap ↗</a></p>
