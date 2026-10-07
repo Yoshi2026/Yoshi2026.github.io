@@ -14,12 +14,12 @@ nav{min-height:70px;display:flex;align-items:center;justify-content:space-betwee
 h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(3.2rem,8vw,6.8rem);line-height:.93;letter-spacing:-.055em;margin:20px 0 30px}
 .lead{font-size:clamp(1.12rem,2vw,1.45rem);max-width:780px;color:#3f4e61}.meta{display:flex;gap:12px 24px;flex-wrap:wrap;color:var(--muted);font-size:.92rem}.meta a,.textlink{color:var(--fjord);text-decoration:none;border-bottom:1px solid #9eb0c3}
 section{padding:82px 0;border-bottom:1px solid var(--line)}.grid{display:grid;grid-template-columns:220px 1fr;gap:72px}h2{font:400 2rem Georgia,serif;margin:0}.note{color:var(--muted);font-size:.88rem}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--paper);border:1px solid var(--line);padding:28px;min-height:215px;display:flex;flex-direction:column}.card h3{font-size:1.12rem;margin:20px 0 8px}.card p{color:var(--muted);font-size:.93rem;margin:0}.status{margin-top:auto;padding-top:20px;color:#71849a;font-size:.8rem}
+.featured{background:var(--fjord);color:#fff;border:1px solid var(--fjord);padding:34px;margin-bottom:18px}.featured .tag{color:#c8d8df}.featured h3{font-family:Georgia,serif;font-weight:400;font-size:1.65rem;margin:18px 0 10px}.featured p{color:#dce5e9;max-width:780px}.featured .status{color:#b7cbd2}.featured a{color:inherit;text-underline-offset:3px}.approach{background:var(--ice);border:1px solid var(--line);padding:28px;margin-bottom:26px}.approach h3{font-family:Georgia,serif;font-weight:400;font-size:1.35rem;margin:16px 0 8px}.approach p{color:var(--muted);margin:0}.subhead{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:var(--fjord);font-weight:750;margin:28px 0 14px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:var(--paper);border:1px solid var(--line);padding:28px;min-height:215px;display:flex;flex-direction:column}.card h3{font-size:1.12rem;margin:20px 0 8px}.card p{color:var(--muted);font-size:.93rem;margin:0}.status{margin-top:auto;padding-top:20px;color:#71849a;font-size:.8rem}
 .feature{background:var(--ice);padding:34px;margin-bottom:18px}.feature h3{font:400 1.55rem Georgia,serif;margin:18px 0 10px}.feature p{color:#526277}.coming{display:flex;gap:12px 24px;flex-wrap:wrap;margin-top:22px;color:#68798d;font-size:.88rem}.actions{display:flex;gap:12px 22px;flex-wrap:wrap;margin-top:22px}.actions a{color:var(--fjord);font-weight:650;text-decoration:none;border-bottom:1px solid #9eb0c3}.research-detail{margin-top:18px;padding:28px;background:var(--paper);border:1px solid var(--line)}.research-detail summary{cursor:pointer;color:var(--fjord);font-weight:700}.research-detail h4{font-family:Georgia,serif;font-size:1.15rem;margin:24px 0 8px}.research-detail p,.research-detail li{color:var(--muted);font-size:.92rem}.research-detail ul{padding-left:20px}.comment{padding:20px 0;border-top:1px solid var(--line)}.comment:first-child{border-top:0;padding-top:0}.comment .source{color:var(--fjord);font-size:.78rem;font-weight:750;letter-spacing:.06em;text-transform:uppercase}.comment h3{font:400 1.18rem Georgia,serif;margin:5px 0 6px}.comment p{color:var(--muted);font-size:.9rem;margin:0 0 8px}
 .pub{padding:23px 0;border-top:1px solid var(--line)}.pub:first-child{border-top:0;padding-top:0}.year{color:var(--fjord);font-size:.78rem;font-weight:750;letter-spacing:.08em}.pt{font:400 1.23rem Georgia,serif;margin:5px 0}.pm{color:var(--muted);font-size:.9rem}
 .copy{max-width:770px}.supervisor-link{color:var(--fjord);font-weight:650;text-decoration:none;border-bottom:1px solid #9eb0c3}.contact{margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}.contact h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:1.25rem;margin:0 0 8px}.contact p{margin:0;color:var(--muted)}.copy h3{margin:0 0 8px}.timeline{margin-top:28px}.time{display:grid;grid-template-columns:145px 1fr;gap:20px;padding:13px 0;border-top:1px solid var(--line)}.time span{color:var(--muted);font-size:.86rem}
 footer{padding:45px 0 65px;color:var(--muted);font-size:.86rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-@media(max-width:760px){.wrap{width:min(calc(100% - 28px),var(--max))}nav{padding:14px 0;align-items:flex-start}.links{gap:8px 14px;justify-content:flex-end}.hero{padding:72px 0 62px}.grid{grid-template-columns:1fr;gap:28px}.cards{grid-template-columns:1fr}section{padding:58px 0;scroll-margin-top:84px}.time{grid-template-columns:1fr;gap:2px}}
+@media(max-width:900px){.cards{grid-template-columns:1fr}}@media(max-width:760px){.wrap{width:min(calc(100% - 28px),var(--max))}nav{padding:14px 0;align-items:flex-start}.links{gap:8px 14px;justify-content:flex-end}.hero{padding:72px 0 62px}.grid{grid-template-columns:1fr;gap:28px}.cards{grid-template-columns:1fr}section{padding:58px 0;scroll-margin-top:84px}.time{grid-template-columns:1fr;gap:2px}}
 </style>
 </head>
 <body>
@@ -27,11 +27,46 @@ footer{padding:45px 0 65px;color:var(--muted);font-size:.86rem}.foot{display:fle
 <main id="top">
 <div class="hero"><div class="wrap"><div class="eyebrow">International Economic Law · Trade · Data</div><h1>Yoshimichi<br>Ishikawa</h1><p class="lead">I study international economic law, with a particular interest in seeing more clearly how trade rules operate in the real world through legal analysis, data, and empirical evidence.</p><div class="meta"><span>Associate Professor · University of Shizuoka</span><a href="https://researchmap.jp/y.ishikawa" target="_blank">researchmap ↗</a><a href="https://eng.u-shizuoka-ken.ac.jp/research/researchers/international/" target="_blank">University profile ↗</a></div></div></div>
 
-<section id="research"><div class="wrap grid"><div><h2>Research</h2><p class="note">Current questions and projects.</p></div><div class="cards">
-<article class="card"><div class="tag">Trade × Sustainability</div><h3>Climate, trade and the ACCTS</h3><p>Legal and empirical analysis of environmental goods and fossil-fuel subsidies under the Agreement on Climate Change, Trade and Sustainability.</p><div class="status">Current project</div></article>
-<article class="card"><div class="tag">WTO · Public Health</div><h3>Trade and health</h3><p>International economic law at the boundary between market access, regulation and public-health objectives.</p><div class="status">Research field</div></article>
-<article class="card"><div class="tag">Economic Security</div><h3>Geoeconomics and international economic law</h3><p>How international economic law responds to geopolitical risk, economic coercion and strategic dependencies.</p><div class="status">Research field</div></article>
-<article class="card"><div class="tag">Law × AI × Data</div><h3>Making hidden realities visible</h3><p>Using AI and reproducible data analysis to test legal and policy claims that doctrinal analysis alone cannot fully observe.</p><div class="status">Methodological direction</div></article>
+<section id="research"><div class="wrap grid"><div><h2>Research</h2><p class="note">Current focus, research approach and broader fields.</p></div><div>
+<article class="featured">
+<div class="tag">AI × WTO × DATA · Featured current project</div>
+<h3>WTO Dispute Settlement in Practice</h3>
+<p>This project uses AI and large-scale trade data to examine how WTO dispute settlement has actually operated in practice. Rather than assuming what dispute settlement does, the project seeks to make its real-world patterns empirically visible.</p>
+<div class="status">Current project · MEXT SPReAD 2026 · <a href="#spread-project">Project details ↓</a></div>
+</article>
+
+<div class="approach">
+<div class="tag">Research approach</div>
+<h3>Making hidden realities visible through law × AI × data</h3>
+<p>I use AI not simply as a writing tool, but as a research instrument for turning large bodies of legal information into systematically analysable evidence. The aim is to connect legal analysis with data in order to observe patterns that conventional case-by-case analysis may not fully reveal.</p>
+</div>
+
+<div class="subhead">Broader research</div>
+<div class="cards">
+<article class="card"><div class="tag">Trade &amp; Sustainability</div><h3>Climate, trade and the ACCTS</h3><p>Legal and empirical analysis of environmental goods and fossil-fuel subsidies under the Agreement on Climate Change, Trade and Sustainability.</p><div class="status">Ongoing research</div></article>
+<article class="card"><div class="tag">Economic Security</div><h3>Geoeconomics and international economic law</h3><p>How international economic law responds to geopolitical risk, economic coercion, strategic dependencies and trade resilience.</p><div class="status">Research field</div></article>
+<article class="card"><div class="tag">Trade &amp; Health</div><h3>Trade and health</h3><p>International economic law at the boundary between market access, regulation, scientific uncertainty and public-health objectives.</p><div class="status">Research field</div></article>
+</div>
+</div></div></section>
+
+<section id="spread-project"><div class="wrap grid"><div><h2>Featured Project</h2><p class="note">WTO × AI × Data.</p></div><div class="copy">
+<div class="tag">MEXT SPReAD 2026</div>
+<h3 style="font-family:Georgia,serif;font-weight:400;font-size:1.6rem;margin-top:16px">WTO Dispute Settlement in Practice: Uncovering Its Actual Use through AI</h3>
+
+<h3>Research question</h3>
+<p>WTO dispute settlement is usually studied through legal texts, institutional design and individual disputes. This project asks a different empirical question: <strong>What does WTO dispute settlement actually look like when its operation is examined systematically through data?</strong></p>
+<p>By combining AI with large-scale data, the project seeks to make patterns in the use of WTO dispute settlement visible that are difficult to observe through individual case studies alone.</p>
+
+<h3>Why AI?</h3>
+<p>WTO dispute settlement has generated a large body of legal documents and related information that is difficult to process systematically by human researchers alone. This project uses AI as <strong>a research instrument for turning large bodies of legal information into systematically analysable evidence</strong>, rather than simply as a tool for generating text.</p>
+<p>The project is a concrete application of the broader methodological direction: <strong>making hidden realities visible through law × AI × data.</strong></p>
+
+<h3>Broader significance</h3>
+<p>The project aims to contribute to a more evidence-based understanding of international economic law by connecting legal analysis with AI-assisted empirical research.</p>
+
+<h3>Funding</h3>
+<p>This project is supported by the Japanese Ministry of Education, Culture, Sports, Science and Technology (MEXT) under the Supporting Pioneering Research through AI for 1,000 Discovery challenges Program (SPReAD).</p>
+<p class="note">Japanese project title: WTO紛争処理の虚像と実像：AIを用いた利用実態の解明</p>
 </div></div></section>
 
 <section id="data"><div class="wrap grid"><div><h2>Data &amp; Replication</h2><p class="note">Evidence, methods and reproducible research.</p></div><div>
