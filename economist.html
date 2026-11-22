@@ -1,0 +1,30 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Economist | Yoshimichi Ishikawa</title>
+<meta name="description" content="A daily log of what Yoshimichi Ishikawa reads in The Economist, with short personal notes.">
+<link rel="canonical" href="https://yoshi2026.github.io/economist.html">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header><div class="wrap"><nav><a class="brand" href="/">Yoshimichi Ishikawa</a><div class="links"><a href="/#research">Research</a><a href="/#data">Data</a><a href="/#publications">Publications</a><a href="/#commentary">Commentary</a><a href="/economist.html">Economist</a><a href="/#teaching">Teaching</a><a href="/#about">About</a></div></nav></div></header>
+<main id="top">
+<div class="hero"><div class="wrap"><h1>Economist</h1><p class="lead">A daily log of what I read in The Economist, with a short note of my own.</p></div></div>
+
+<section><div class="wrap grid"><div><h2>Reading Log</h2></div><div>
+{% assign entries = site.data.economist | sort: "read_date" | reverse %}
+{% for entry in entries %}
+<article class="comment">
+<div class="source"><time datetime="{{ entry.read_date }}">{{ entry.read_date }}</time></div>
+<h3><a class="textlink" href="{{ entry.url }}" target="_blank" rel="noopener">{{ entry.title }}</a></h3>
+<p>{{ entry.section }} · Issue dated <time datetime="{{ entry.issue_date }}">{{ entry.issue_date }}</time></p>
+{% if entry.note != "" and entry.note != nil %}<blockquote>{{ entry.note }}</blockquote>{% endif %}
+</article>
+{% endfor %}
+</div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 Yoshimichi Ishikawa</span><span>Research · Publications · Data</span></div></footer>
+</body></html>
