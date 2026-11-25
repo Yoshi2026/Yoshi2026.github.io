@@ -21,7 +21,7 @@
 <div class="source"><time datetime="{{ entry.read_date }}">{{ entry.read_date }}</time></div>
 <h3><a class="textlink" href="{{ entry.url }}" target="_blank" rel="noopener">{{ entry.title }}</a></h3>
 <p>{{ entry.section }} · Issue dated <time datetime="{{ entry.issue_date }}">{{ entry.issue_date }}</time></p>
-{% if entry.note != "" and entry.note != nil %}<blockquote>{{ entry.note | markdownify }}</blockquote>{% endif %}
+{% if entry.note != "" and entry.note != nil %}<blockquote><p>{% if entry.note_html != nil %}{{ entry.note_html }}{% else %}{{ entry.note | escape }}{% endif %}</p></blockquote>{% endif %}
 </article>
 {% endfor %}
 </div></div></section>
