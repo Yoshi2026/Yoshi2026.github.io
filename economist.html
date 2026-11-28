@@ -17,7 +17,7 @@
 {% assign entries = site.data.economist | sort: "read_date" | reverse %}
 <section><div class="wrap grid"><div><h2>Reading Log</h2></div><div class="economist-body"><div class="reading-list">
 {% for entry in entries %}
-<article class="comment">
+<article class="comment" id="read-{{ entry.read_date }}">
 <div class="source"><time datetime="{{ entry.read_date }}">{{ entry.read_date }}</time></div>
 <h3><a class="textlink" href="{{ entry.url }}" target="_blank" rel="noopener">{{ entry.title }}</a></h3>
 <p>{{ entry.section }} · Issue dated <time datetime="{{ entry.issue_date }}">{{ entry.issue_date }}</time></p>
@@ -47,19 +47,24 @@
     for (let i = 0; i < 42; i += 1) {
       const date = new Date(year, month, i - offset + 1);
       const iso = isoDate(date);
-      const day = document.createElement("span");
+      const cell = document.createElement("span");
+      const isRead = readDates.has(iso);
+      const day = document.createElement(isRead ? "a" : "span");
+      cell.className = "calendar-cell";
+      cell.setAttribute("role", "gridcell");
       day.className = "calendar-day";
-      day.setAttribute("role", "gridcell");
       day.textContent = date.getDate();
       if (date.getMonth() !== month) day.classList.add("is-outside");
-      if (readDates.has(iso)) {
+      if (isRead) {
         day.classList.add("is-read");
+        day.href = `#read-${iso}`;
         day.setAttribute("aria-label", `${iso}, read`);
         day.title = "Read The Economist";
       } else {
         day.setAttribute("aria-label", iso);
       }
-      days.append(day);
+      cell.append(day);
+      days.append(cell);
     }
   };
   document.getElementById("calendar-prev").addEventListener("click", () => {
