@@ -14,8 +14,8 @@
 <main id="top">
 <div class="hero"><div class="wrap"><h1>Economist</h1><p class="lead">A daily log of what I read in The Economist, with a short note of my own.</p></div></div>
 
-<section><div class="wrap grid"><div><h2>Reading Log</h2></div><div>
 {% assign entries = site.data.economist | sort: "read_date" | reverse %}
+<section><div class="wrap grid"><div><h2>Reading Log</h2></div><div class="economist-body"><div class="reading-list">
 {% for entry in entries %}
 <article class="comment">
 <div class="source"><time datetime="{{ entry.read_date }}">{{ entry.read_date }}</time></div>
@@ -24,7 +24,57 @@
 {% if entry.note != "" and entry.note != nil %}<blockquote><p>{% if entry.note_html != nil %}{{ entry.note_html }}{% else %}{{ entry.note | escape }}{% endif %}</p></blockquote>{% endif %}
 </article>
 {% endfor %}
+</div>
+<aside class="reading-calendar" aria-label="Reading calendar">
+<div class="calendar-header"><button class="calendar-nav" id="calendar-prev" type="button" aria-label="Previous month"><span aria-hidden="true">‹</span></button><h3 id="calendar-title" aria-live="polite"></h3><button class="calendar-nav" id="calendar-next" type="button" aria-label="Next month"><span aria-hidden="true">›</span></button></div>
+<div class="calendar-weekdays" aria-hidden="true"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+<div class="calendar-days" id="calendar-days" role="grid" aria-labelledby="calendar-title"></div>
+</aside>
 </div></div></section>
+<script>
+(() => {
+  const readDates = new Set([{% for entry in entries %}"{{ entry.read_date }}"{% unless forloop.last %},{% endunless %}{% endfor %}]);
+  const latest = "{{ entries.first.read_date }}".split("-").map(Number);
+  let year = latest[0];
+  let month = latest[1] - 1;
+  const title = document.getElementById("calendar-title");
+  const days = document.getElementById("calendar-days");
+  const isoDate = date => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+  const renderCalendar = () => {
+    title.textContent = new Intl.DateTimeFormat("en", {month: "long", year: "numeric"}).format(new Date(year, month, 1));
+    days.replaceChildren();
+    const offset = (new Date(year, month, 1).getDay() + 6) % 7;
+    for (let i = 0; i < 42; i += 1) {
+      const date = new Date(year, month, i - offset + 1);
+      const iso = isoDate(date);
+      const day = document.createElement("span");
+      day.className = "calendar-day";
+      day.setAttribute("role", "gridcell");
+      day.textContent = date.getDate();
+      if (date.getMonth() !== month) day.classList.add("is-outside");
+      if (readDates.has(iso)) {
+        day.classList.add("is-read");
+        day.setAttribute("aria-label", `${iso}, read`);
+        day.title = "Read The Economist";
+      } else {
+        day.setAttribute("aria-label", iso);
+      }
+      days.append(day);
+    }
+  };
+  document.getElementById("calendar-prev").addEventListener("click", () => {
+    month -= 1;
+    if (month < 0) { month = 11; year -= 1; }
+    renderCalendar();
+  });
+  document.getElementById("calendar-next").addEventListener("click", () => {
+    month += 1;
+    if (month > 11) { month = 0; year += 1; }
+    renderCalendar();
+  });
+  renderCalendar();
+})();
+</script>
 </main>
 <footer><div class="wrap foot"><span>© 2026 Yoshimichi Ishikawa</span><span>Research · Publications · Data</span></div></footer>
 </body></html>
