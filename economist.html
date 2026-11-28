@@ -27,7 +27,7 @@
 </div>
 <aside class="reading-calendar" aria-label="Reading calendar">
 <div class="calendar-header"><button class="calendar-nav" id="calendar-prev" type="button" aria-label="Previous month"><span aria-hidden="true">‹</span></button><h3 id="calendar-title" aria-live="polite"></h3><button class="calendar-nav" id="calendar-next" type="button" aria-label="Next month"><span aria-hidden="true">›</span></button></div>
-<div class="calendar-weekdays" aria-hidden="true"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+<div class="calendar-weekdays" aria-hidden="true"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
 <div class="calendar-days" id="calendar-days" role="grid" aria-labelledby="calendar-title"></div>
 </aside>
 </div></div></section>
@@ -43,7 +43,7 @@
   const renderCalendar = () => {
     title.textContent = new Intl.DateTimeFormat("en", {month: "long", year: "numeric"}).format(new Date(year, month, 1));
     days.replaceChildren();
-    const offset = (new Date(year, month, 1).getDay() + 6) % 7;
+    const offset = new Date(year, month, 1).getDay();
     for (let i = 0; i < 42; i += 1) {
       const date = new Date(year, month, i - offset + 1);
       const iso = isoDate(date);
